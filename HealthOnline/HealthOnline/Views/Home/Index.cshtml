@@ -1,0 +1,390 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script>
+   
+</script>
+<body>
+    <div class="container-fluid">
+        <!--logo部分-->
+        <div class="row" style="background-color:#EBF2E9">
+            <div class="col-md-2" style="padding-top:5px" id="answerDiv" >
+                <button class="btn btn-success btn-sm" style="width:100%; font-weight: bold;">answer question for free</button>
+            </div>
+            <div class="col-md-3" style="padding-left:40px;padding-top:10px">
+                @Html.Partial("_LoginPartial")
+                @if (User.Identity.IsAuthenticated)
+                {
+                    @Html.ActionLink("Make Reservation", "Create", "Questions","",new { style= "color:darkslategray" })
+                }
+                <!--<a href="#" style="color:darkslategray">log out</a>&nbsp;&nbsp;&nbsp;-->
+
+            </div>
+            <div class="col-md-1 hidden-xs">
+
+            </div>
+            <div class="col-md-6" style="padding-left: 80px;padding-top:10px">
+                <span name="">
+                    <a href="#" style="color:darkslategray">disease repository</a>&nbsp;&nbsp;&nbsp;
+                    <a href="#" style="color:darkslategray">drag repository</a>&nbsp;&nbsp;&nbsp;
+                    <a href="#" style="color:darkslategray">find a doctor</a>&nbsp;&nbsp;&nbsp;
+                    <a href="#" style="color:darkslategray">patient&vistor guides</a>&nbsp;&nbsp;
+                    <a href="#" style="color:darkslategray">contact us</a>
+                </span>
+            </div>
+        </div>
+        <!--搜索栏部分-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3" style="padding-right:60px">
+                    <img src="../img/healthyOnline.png" style="width:100%;height:100%;padding-top:15px">
+                </div>
+                <div class="col-md-6" id="search">
+                    <form class="navbar-form center-block" style="padding-top:15px;">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-3" id="answerQuestion">
+                    <a href="#"><img src="../img/answerquestion.png" style="width:80%; height:60%"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--下拉菜单列表-->
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="FIT5032_mainPage.html">Main Page</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="https://www.healthline.com/symptom-checker">Online Consultation<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.webmd.com/drugs/2/index">Drugs&supplement</a>
+                            </li>
+                            <li>
+                                <a href="https://www.healthline.com/health-news?ref=global">Health Advisory</a>
+                            </li>
+                            <li>
+                                <a href="https://www.realsimple.com/health/preventative-health/best-doctor-recommended-health-websites">Recommended Website</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=lA8WuTUeZfc">Health Video</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Categories <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://www.healthline.com/symptom-checker">Online Consultation</a></li>
+                                    <li><a href="https://www.webmd.com/drugs/2/index">Drugs&supplement</a></li>
+                                    <li><a href="https://www.healthline.com/health-news?ref=global">Health Advisory</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="https://www.realsimple.com/health/preventative-health/best-doctor-recommended-health-websites">Recommended Website</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="https://www.healthline.com/health-news?ref=global">Health Video</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!--轮播图-->
+        <div class="container-fluid">
+            <div class="row" style="padding-bottom: 10px;">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="col-md-6">
+                                <a href="#"><img src="../img/page1.1.png" style="width:650px;height:350px;" alt="..."></a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#"><img src="../img/page1.2.jpg" alt="..."></a>
+                            </div>
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img src="../img/kids.png" alt="..."></a>
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </div>
+                        ...
+                        <div class="item">
+                            <img src="../img/medicine.png" alt="...">
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--滚动监听测试-->
+        <nav id="navbar-example" class="navbar navbar-default navbar-static" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-js-navbar-scrollspy">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" style="background-color:#F0F0F0;">
+                        <font style="font-weight: bold;">Trending Topics</font>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#Measles">Measles&nbsp;&nbsp;</a></li>
+                        <li><a href="#WestNileVirus">West Nile Virus</a></li>
+                        <li><a href="#TheBestExercisesforHeartHealth">The Best Exercises for Heart Health</a></li>
+                        <li class="dropdown">
+                            <a href="#" id="navbarDrop1" class="dropdown-toggle" data-toggle="dropdown">
+                                Cancer
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="navbarDrop1">
+                                <li><a href="#CancerOverView" tabindex="-1">Cancer OverView</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#SkinCancer" tabindex="-1">Skin Cancer</a></li>
+                                <li><a href="#BrainCancer" tabindex="-1">Brain Cancer</a></li>
+                                <li><a href="#Leukemia" tabindex="-1">Leukemia</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div data-spy="scroll" data-target="#navbar-example" data-offset="0" style="height:200px;overflow:auto; position: relative;">
+            <h3 id="Measles">Measles</h3>
+            <p>
+                ARTICLES ON MEASLES (RUBEOLA) What Is Measles? Measles Symptoms Measles Prevention Picture of Measles The measles virus lives in the mucus of your nose and throat. It’s spread through the air and by coming into direct contact with someone who has it.
+                The virus can stay active on surfaces and in the air for up to 2 hours. It’s very contagious. If you haven’t been vaccinated and are in a room with someone who has measles, you have a 90% chance of getting it. Part of what makes measles so dangerous
+                is that you can be contagious 4 days before you get the telltale rash. So you could easily spread the virus without knowing you have it. You’ll continue to be contagious 4 days after the rash goes away. Measles Symptoms A high fever is normally
+                the first sign of measles. It usually starts 10 to 12 days after you were exposed to the virus. The fever will last 4 to 7 days. During that time, you might develop the following symptoms: Runny nose Red eyes Sore throat Tiny white bumps in your
+                mouth (doctors call these Koplik spots) Rash. It usually starts at the hairline and spreads to the neck, torso, limbs, feet, and hands. If you get measles, you’ll be sick for a couple of weeks. Fortunately, it’s preventable.
+            </p>
+            <p>
+                Possible complications of measles include: otitis media – inflammation of the middle ear diarrhoea and vomiting – may cause further complications such as dehydration respiratory infections – such as bronchitis, croup or laryngitis pneumonia – a type of
+                lung inflammation that causes about 60 per cent of measles deaths pregnancy problems – if a pregnant woman contracts measles, she risks miscarriage or premature labour encephalitis – or brain inflammation, affects about one person with measles in
+                every 1000. About 10 to 15 per cent of people with encephalitis die and 15 to 40 per cent of survivors have permanent brain damage to varying degrees subacute sclerosing panencephalitis (SSPE) – occurs in about one in every 100,000 cases of measles.
+                SSPE is an extremely rare progressive inflammation of the brain that causes brain degeneration and is always fatal. SSPE usually begins about seven years after the measles infection.
+
+            </p>
+            <h3 id="WestNileVirus">West Nile Virus</h3>
+            <p>
+                West Nile virus is a viral infection carried by mosquitoes. It belongs to a group of viruses called flaviviruses. A person infected with the virus may have no symptoms. About 20 per cent of people infected develop mild flu-like symptoms such as fever,
+                fatigue and aching muscles. In rare cases, the West Nile virus can lead to serious complications such as meningitis and encephalitis (inflammations of the central nervous system). There is currently no medication to treat the infection, and there
+                is no human vaccine to prevent it. The West Nile virus was first identified in the West Nile district of Uganda in 1937. It is known to lethally infect horses, domestic birds and wild birds as well as humans. Until quite recently, the West Nile
+                virus was confined to Eastern Europe, West Asia, the Middle East and Africa. However, outbreaks are now occurring in Western countries. For example, in the United States there have been three large outbreaks since 2002, with serious neurological
+                infections occurring in almost 3000 cases during outbreak years. A subtype of the West Nile virus (called Kunjin virus, or KUNV) is found in parts of Australia, particularly the Northern Territory and northern Western Australia. Kunjin is less virulent
+                than the current US strain of West Nile virus. People with antibodies to Kunjin virus may be immune to infection with the West Nile virus.
+            </p>
+            <h3 id="TheBestExercisesforHeartHealth">The Best Exercises for Heart Health</h3>
+            <p>
+                When considering the benefits of exercising, losing weight and “getting ripped” might be the first things to come to mind. But there’s a benefit that is way more crucial: keeping a healthy heart. Your heart is the most important muscle in your body, so
+                it deserves some attention too, right? Let’s take a look at some of the best exercises to keep your heart strong and reduce your risk of heart disease and stroke. Aerobics Aerobic exercises, also known as cardio, are designed to raise your heart
+                rate and make you break a sweat.
+            <p></p>
+            <p style="font-size:15px;font-weight: bold;">Aerobics</p>
+            help to improve your circulation and lower your blood pressure. If you have diabetes, they can also help you control your blood sugar level.
+            <p></p>
+            <p style="font-size:15px;font-weight: bold;">Strength training</p>
+            Strength training (sometimes called resistance training) is another great way to improve your heart health. When combined with aerobics, strength training will help to raise good cholesterol and lower bad cholesterol. It can also reduce your risk of having
+            a heart attack or stroke.
+            <p></p>
+            <p style="font-size:15px;font-weight: bold;">Flexibility</p>
+            Although they may not influence your heart health directly, flexibility and stretching exercises can contribute a lot to your workout. Activities like yoga, tai chi, and Pilates will not only improve your flexibility and balance, but also decrease your
+            chances of getting cramps, joint aches, and muscle pain while working out. Flexibility exercises make it easier to do the other types of physical activities that are necessary for a healthy heart. The great thing about flexibility training is that
+            you can do it anytime, anywhere. Whether it’s warming up before a workout, taking a hot yoga class, or just doing some stretches in your living room, improving your flexibility is always a good idea if you’re serious about heart health. For more
+            information about the exercises to keep your heart healthy, consult your doctor.
+            </p>
+            <h3 id="CancerOverView">Cancer OverView</h3> Cancer, also called malignancy, is an abnormal growth of cells. There are more than 100 types of cancer, including breast cancer, skin cancer, lung cancer, colon cancer, prostate cancer, and lymphoma. Symptoms vary depending on the type. Cancer
+            treatment may include chemotherapy, radiation, and/or surgery.
+            <h3 id="SkinCancer">Skin Cancer</h3>
+            <p style="font-size:15px;font-weight: bold;">Melanoma/Skin Cancer Overview</p>
+            Skin cancers include melanoma, basal cell, and squamous cell. Basal and squamous cell are common and treatment is very effective. Malignant melanoma can be difficult to treat. Early diagnosis and treatment can increase the survival rate from melanoma.
+            <h3 id="BrainCancer">Brain Cancer</h3>
+            <p>
+                The brain is made up of many different types of cells.
+            </p>
+            <p>
+                Some brain cancers occur when one type of cell transforms from its normal characteristics. Once transformed, the cells grow and multiply in abnormal ways. As these abnormal cells grow, they become a mass, or tumor. The brain tumors that result are called
+                primary brain tumors because they originate in the brain. The most common primary brain tumors are gliomas, meningiomas, pituitary adenomas, vestibular schwannomas, and primitive neuroectodermal tumors (medulloblastomas). The term glioma includes
+                glioblastomas, astrocytomas, oligodendrogliomas, and ependymomas. Most of these are named after the part of the brain or the type of brain cell from which they arise.
+            </p>
+            <h3 id="Leukemia">Leukemia</h3>
+            <p>
+                Leukemia is usually thought of as a children’s condition, but it actually affects more adults. It’s more common in men than women, and more in whites than African-Americans. There’s really nothing you can do to prevent leukemia. It’s cancer of your blood
+                cells caused by a rise in the number of white blood cellsin your body. They crowd out the red blood cells and platelets your body needs to be healthy. All those extra white blood cells don’t work right, and that causes problems.
+            </p>
+            <p>
+                Blood has three types of cells: white blood cells that fight infection, red blood cells that carry oxygen, and platelets that help blood to clot. Every day, billions of new blood cells are made in the bone marrow -- most of them red cells. But when you
+                have leukemia, your body makes more white cells than it needs. There are two main types of white blood cells in your body: lymphoid cells and myeloid cells. Leukemia can happen in either type.
+            </p>
+        </div>
+
+</body>
+
+</html>
+<!--底部介绍-->
+<div class="container-fluid" style="background-color: #F0F0F0;">
+    <div class="row">
+        <div class="col-md-4">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th colspan="3" style="font-size:25px;">Introduction</th>
+                    </tr>
+                </thead>
+                <tboday>
+                    <tr>
+                        <td>
+                            <a href="#">About Us</a>
+                        </td>
+                        <td>
+                            <a href="#">Services Announcement</a>
+                        </td>
+                        <td>
+                            <a href="#">Staff Recruitment</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#">Contact Us</a>
+                        </td>
+                        <td>
+                            <a href="#">Helping Center</a>
+                        </td>
+                        <td>
+                            <a href="#">Privacy Policy</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#">Suggestions</a>
+                        </td>
+                        <td>
+                            <a href="#">Find an Online Doctor</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tboday>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <table>
+                <tr>
+                    <td style="padding-top: 10px;">
+                        <font style="font-size:25px; color: black;font-weight: bold;">&nbsp;&nbsp;&nbsp;Get our wellness newsletter</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font style="color:royalblue">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fitness and nutrition tips, health news, and more.
+                        </font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        </br>
+                        <form action="#" method="get" class="form-inline" id="form1">
+                            <div class="form-group">
+                                <label for="exampleInputName2">Name</label>
+                                <input type="text" class="form-control" id="exampleInputName2" placeholder="Please enter your name" name="Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail2">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="healthOnline@example.com" name="Email">
+                            </div>
+                            <button type="submit" class="btn btn-success" id="submit">Subscribe</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        </br>
+                        <font>
+                            we will guarantee your
+                            <font style="text-decoration: underline;">privacy</font>
+                        </font>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                        <th style="font-size:25px;padding-top: 10px;">Official APP</th>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="../img/wechat.png" height="90%">
+                        </td>
+                        <td style="padding-bottom: 65px;">
+                            <font>&nbsp;&nbsp;&nbsp;Let the world know about health</font>
+                            <div class="col-md-5" style="padding-right: 80px;">
+                                </br>
+                                <a href="#"><img src="../img/Android.png"></a>
+                            </div>
+                            <div class="col-md-5" style="padding-left: 40px;padding-top: 2px;">
+                                </br>
+                                <a href="#"><img src="../img/iphone.png"></a>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
